@@ -9,5 +9,13 @@
   "ratelimits": [
     { "name": "ASK_LIMITER", "namespace_id": "10401", "simple": { "limit": 6, "period": 60 } },
     { "name": "ASK_TOTAL_LIMITER", "namespace_id": "10402", "simple": { "limit": 30, "period": 60 } }
-  ]
+  ],
+  "previews": {
+    "ai": { "binding": "AI" },
+    "ratelimits": [
+      { "name": "ASK_LIMITER", "namespace_id": "10411", "simple": { "limit": 6, "period": 60 } },
+      { "name": "ASK_TOTAL_LIMITER", "namespace_id": "10412", "simple": { "limit": 30, "period": 60 } }
+    ]
+  }
 }
+
