@@ -42,7 +42,7 @@ No package installation or build step is required.
    ```
 
 2. Open the project folder.
-3. Open `index.html` in your browser, or serve the folder using an editor extension such as Live Server.
+3. Serve the folder with a local HTTP server. Clean section URLs require the `_redirects` proxy rules (supported by Cloudflare Workers static assets); a basic static server can still show the homepage.
 
 The page also loads an external analytics script. Remove that script from `index.html` if you want to run a copy without analytics.
 
@@ -75,3 +75,6 @@ Found a bug or have an idea? Open an issue in this repository.
 
 Built by **John Ogunsola**.
 
+## Section navigation
+
+`/work`, `/about`, `/approach`, and `/contact` serve the same portfolio via `_redirects`. `section-navigation.js` scrolls to the requested section, preserves Back/Forward navigation, and upgrades existing section hash links. Keep the canonical URL pointed at the homepage because these paths share the same content.
