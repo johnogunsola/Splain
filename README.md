@@ -8,14 +8,17 @@ My personal portfolio and a space for web experiments, ongoing projects, and lea
 
 ## About
 
-I’m John Ogunsola, an aspiring AI engineer based in England with an interest in AI development and safety.
+Iâ€™m John Ogunsola, an aspiring AI engineer based in England with an interest in AI development and safety.
 
 Splain Studio dis my portfolio that contains my progress as I develop my engineering skills, explore web design, and turn ideas into working projects.
 
 ## Features
 
 - Responsive layouts for desktop and mobile
-- Interactive CSS 3D artwork that responds to pointer movement and scrolling
+- GPU-rendered 3D particle artwork with a green aurora and cursor interaction
+- Click the artwork to morph between Splain, GitHub, and LinkedIn
+- Matching profile links, keyboard controls, and static graphics if WebGL2 is unavailable
+- Animation pauses offscreen; reduced-motion users receive a still particle graphic
 - Scroll reveal animations and a brief studio introduction
 - Mobile navigation with keyboard controls
 - Support for reduced-motion preferences
@@ -23,9 +26,9 @@ Splain Studio dis my portfolio that contains my progress as I develop my enginee
 
 ## Built with
 
-- **HTML5** — page structure and content
-- **CSS3** — layouts, styling, animations, and 3D transforms
-- **JavaScript** — navigation and interactive effects
+- **HTML5** â€” page structure and content
+- **CSS3** â€” layouts, styling, animations, and 3D transforms
+- **JavaScript** â€” navigation and interactive effects
 
 No package installation or build step is required.
 
@@ -46,14 +49,14 @@ The page also loads an external analytics script. Remove that script from `index
 
 ```text
 Splain.dev/
-├── index.html             # Main page
-├── index.css              # Styles and responsive layouts
-├── index.js               # Navigation and interactive artwork
-├── splain-intro.css       # Introduction animation styles
-├── splain-intro.js        # Introduction animation behaviour
-├── favicon.svg
-├── favicon.png
-└── John-Ogunsola-CV.pdf
+â”œâ”€â”€ index.html             # Main page
+â”œâ”€â”€ index.css              # Styles and responsive layouts
+â”œâ”€â”€ index.js               # Navigation and scroll reveals
+â”œâ”€â”€ splain-intro.css       # Introduction animation styles
+â”œâ”€â”€ splain-intro.js        # Introduction animation behaviour
+â”œâ”€â”€ favicon.svg
+â”œâ”€â”€ favicon.png
+â””â”€â”€ John-Ogunsola-CV.pdf
 ```
 
 ## Explore

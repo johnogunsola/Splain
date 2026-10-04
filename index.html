@@ -9,6 +9,8 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./index.css">
   <script defer src="./index.js"></script>
+  <link rel="stylesheet" href="./particle-logo.css">
+  <script defer src="./particle-logo.js"></script>
   <script defer src="https://insight.kollod.dev/script.js?siteId=ec9929da-01c2-4baa-aa3d-e4d976c6b00f"></script>
   <link rel="stylesheet" href="./splain-intro.css">
   <script defer src="./splain-intro.js"></script>
@@ -27,7 +29,25 @@
         <p class="hero-description">I’m John Ogunsola, the mind behind Splain Studio. I am a 17-year-old aspiring AI engineer, based in England, exploring how to improve AI development and safety.</p>
         <div class="hero-actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="#about">A little about me <span aria-hidden="true">↓</span></a></div>
       </div>
-      <div class="hero-art" aria-label="Abstract Splain Studio graphic"><div class="art-top"><span>SPLAIN / EXPLORATIONS</span><span>001</span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="model" aria-hidden="true"><div class="model-ring ring-a"></div><div class="model-ring ring-b"></div><div class="model-ring ring-c"></div><div class="model-ring ring-d"></div><div class="model-core">✳</div></div><div class="art-bottom"><span>SCROLL / MOVE TO EXPLORE</span><span aria-hidden="true">↗</span></div></div>
+      <div class="hero-art particle-art" data-identity="splain" data-renderer="fallback">
+        <div class="art-top"><span>SPLAIN / LIVING IDENTITIES</span><span class="particle-top-count">01 / 03</span></div>
+        <button class="particle-stage" type="button" aria-label="Splain particle logo. Click to transform into GitHub." aria-describedby="particle-hint">
+          <canvas class="particle-canvas" aria-hidden="true"></canvas>
+          <span class="particle-fallback" aria-hidden="true"><span>s.</span></span>
+        </button>
+        <div class="particle-footer">
+          <div>
+            <div class="particle-controls" role="group" aria-label="Choose a particle logo">
+              <button class="particle-choice" type="button" aria-pressed="true">Splain</button>
+              <button class="particle-choice" type="button" aria-pressed="false">GitHub</button>
+              <button class="particle-choice" type="button" aria-pressed="false">LinkedIn</button>
+            </div>
+            <p class="particle-hint" id="particle-hint">MOVE TO EXPLORE · CLICK TO TRANSFORM</p>
+          </div>
+          <a class="particle-profile" href="#work" aria-label="Explore my work">Explore my work <span aria-hidden="true">↓</span></a>
+        </div>
+        <span class="particle-status" role="status" aria-live="polite" aria-atomic="true"></span>
+      </div>
       <div class="hero-bottom"><span>DESIGN WITH INTENTION. BUILD WITH CURIOSITY.</span><a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
     </section>
     <section class="section wrap" id="work">
