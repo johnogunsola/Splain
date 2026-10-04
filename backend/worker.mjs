@@ -1,4 +1,5 @@
 import { systemPrompt } from './knowledge.mjs';
+import { countTopic } from './topics.mjs';
 const json = (data, status = 200, extra = {}) => Response.json(data, {
   status, headers: { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', ...extra },
 });
@@ -45,6 +46,8 @@ export default {
       });
       const answer = result.choices?.[0]?.message?.content || result.response;
       if (typeof answer !== 'string' || !answer.trim()) return json({ error: 'No reply received.' }, 502);
+      try { await countTopic(env.TOPIC_STATS, messages.at(-1).content); }
+      catch { console.warn('Topic statistics update unavailable.'); }
       return json({ answer: answer.trim().slice(0, 2400) });
     } catch { return json({ error: 'Assistant temporarily unavailable.' }, 503); }
   },
