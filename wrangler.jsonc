@@ -6,11 +6,13 @@
   "build": { "command": "node scripts/build-assets.mjs" },
   "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
   "ai": { "binding": "AI" },
+  "d1_databases": [{ "binding": "TOPIC_STATS", "database_name": "splain-topic-statistics", "database_id": "b496bedc-a5b1-4eb7-8d1e-b33c2c9a5087" }],
   "ratelimits": [
     { "name": "ASK_LIMITER", "namespace_id": "10401", "simple": { "limit": 6, "period": 60 } },
     { "name": "ASK_TOTAL_LIMITER", "namespace_id": "10402", "simple": { "limit": 30, "period": 60 } }
   ],
   "previews": {
+    "d1_databases": [],
     "ai": { "binding": "AI" },
     "ratelimits": [
       { "name": "ASK_LIMITER", "namespace_id": "10411", "simple": { "limit": 6, "period": 60 } },
@@ -18,4 +20,3 @@
     ]
   }
 }
-

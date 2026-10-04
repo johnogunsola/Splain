@@ -50,3 +50,16 @@ test('returns honest errors for missing bindings, model failure and empty replie
 test('passes non-API requests to static assets', async () => {
   assert.equal(await (await worker.fetch(new Request('https://splain.dev/work'), environment())).text(), 'asset');
 });
+test('counts successful replies only and tolerates statistics outages', async () => {
+  let writes = 0;
+  const TOPIC_STATS = { prepare: () => ({ bind: () => ({ run: async () => { writes++; } }) }) };
+  assert.equal((await worker.fetch(request(question), environment({ TOPIC_STATS }))).status, 200);
+  assert.equal(writes, 1);
+  assert.equal((await worker.fetch(request(question), environment({ TOPIC_STATS, AI: { run: async () => ({}) } }))).status, 502);
+  assert.equal(writes, 1);
+  const warning = console.warn;
+  console.warn = () => {};
+  try {
+    assert.equal((await worker.fetch(request(question), environment({ TOPIC_STATS: { prepare: () => { throw new Error('offline'); } } }))).status, 200);
+  } finally { console.warn = warning; }
+});
