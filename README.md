@@ -8,7 +8,7 @@ My personal portfolio and a space for web experiments, ongoing projects, and lea
 
 ## About
 
-Iâ€™m John Ogunsola, an aspiring AI engineer based in England with an interest in AI development and safety.
+I’m John Ogunsola, an aspiring AI engineer based in England with an interest in AI development and safety.
 
 Splain Studio dis my portfolio that contains my progress as I develop my engineering skills, explore web design, and turn ideas into working projects.
 
@@ -26,9 +26,10 @@ Splain Studio dis my portfolio that contains my progress as I develop my enginee
 
 ## Built with
 
-- **HTML5** â€” page structure and content
-- **CSS3** â€” layouts, styling, animations, and 3D transforms
-- **JavaScript** â€” navigation and interactive effects
+- **HTML5** — page structure and content
+- **CSS3** — layouts, styling, animations, and 3D transforms
+- **JavaScript** — navigation and interactive effects
+- **WebGL2 / GLSL** — particle morphs, depth shading, and the aurora backdrop
 
 No package installation or build step is required.
 
@@ -49,14 +50,17 @@ The page also loads an external analytics script. Remove that script from `index
 
 ```text
 Splain.dev/
-â”œâ”€â”€ index.html             # Main page
-â”œâ”€â”€ index.css              # Styles and responsive layouts
-â”œâ”€â”€ index.js               # Navigation and scroll reveals
-â”œâ”€â”€ splain-intro.css       # Introduction animation styles
-â”œâ”€â”€ splain-intro.js        # Introduction animation behaviour
-â”œâ”€â”€ favicon.svg
-â”œâ”€â”€ favicon.png
-â””â”€â”€ John-Ogunsola-CV.pdf
+├── index.html             # Main page
+├── index.css              # Styles and responsive layouts
+├── index.js               # Navigation and scroll reveals
+├── particle-logo.js       # GPU shaders and logo interaction
+├── particle-logo.css      # Particle card and controls
+├── THIRD-PARTY-NOTICES.txt # Bootstrap Icons attribution
+├── splain-intro.css       # Introduction animation styles
+├── splain-intro.js        # Introduction animation behaviour
+├── favicon.svg
+├── favicon.png
+└── John-Ogunsola-CV.pdf
 ```
 
 ## Explore
@@ -70,3 +74,4 @@ Splain.dev/
 Found a bug or have an idea? Open an issue in this repository.
 
 Built by **John Ogunsola**.
+
