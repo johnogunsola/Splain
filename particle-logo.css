@@ -1,0 +1,23 @@
+.hero-art.particle-art{background:#182019;perspective:none;isolation:isolate;border-color:#343f2e;display:block}
+.particle-stage{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;background:transparent;color:var(--green);cursor:pointer;touch-action:pan-y;overflow:hidden}
+.particle-stage:focus-visible{outline:2px solid var(--green);outline-offset:-7px;border-radius:3px}
+.particle-canvas{display:block;width:100%;height:100%;opacity:0;transition:opacity .65s}
+.particle-art[data-renderer="webgl2"] .particle-canvas{opacity:1}
+.particle-fallback{position:absolute;inset:65px 30px 90px;display:grid;place-items:center;pointer-events:none;background:radial-gradient(ellipse,#b5ed8012,transparent 70%)}
+.particle-fallback>span{font:bold 190px Arial,Helvetica,sans-serif;letter-spacing:-14px;padding-right:14px;text-shadow:0 0 50px #b5ed8035}
+.particle-fallback svg{width:170px;height:170px;fill:var(--green);filter:drop-shadow(0 0 24px #b5ed8025)}
+.particle-art[data-renderer="webgl2"] .particle-fallback{visibility:hidden}
+.particle-art .art-top{z-index:2;pointer-events:none;font-size:8px;color:#bbc7b1}
+.particle-top-count{color:#b5ed80}
+.particle-footer{position:absolute;z-index:2;bottom:20px;left:22px;right:22px;display:flex;align-items:end;justify-content:space-between;gap:12px;pointer-events:none}
+.particle-controls{pointer-events:auto;display:flex;gap:5px;margin-bottom:11px}
+.particle-choice{background:transparent;color:#b8c4ad;border:1px solid transparent;border-radius:20px;min-height:30px;padding:6px 9px;font:9px Arial,Helvetica,sans-serif;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.particle-choice:hover{color:#eeeee6;border-color:#607050}
+.particle-choice[aria-pressed="true"]{background:#b5ed8014;border-color:#b5ed8050;color:var(--green)}
+.particle-hint{margin:0;color:#aab79f;font:8px monospace;letter-spacing:1px;line-height:1.5}
+.particle-profile{pointer-events:auto;font-size:11px;font-weight:500;color:var(--green);border-bottom:1px solid #b5ed8055;padding:10px 0 5px;white-space:nowrap;transition:color .2s,border-color .2s}
+.particle-profile:hover{color:#eeeee6;border-color:#eeeee6}
+.particle-profile span{margin-left:7px}
+.particle-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:1000px){.particle-footer{left:18px;right:18px}.particle-art .art-top{left:18px;right:18px}.particle-profile{font-size:10px}.particle-choice{padding-inline:7px}}
+@media(max-width:700px){.hero-art.particle-art{height:350px}.particle-fallback>span{font-size:170px}.particle-art .art-top{top:20px}.particle-footer{bottom:17px}.particle-hint{font-size:7px}.particle-choice{min-height:44px}}

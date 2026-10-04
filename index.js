@@ -20,40 +20,6 @@ document.addEventListener('keydown', event => {
 });
 window.matchMedia('(min-width: 701px)').addEventListener('change', closeMenu);
 document.querySelector('#year').textContent = new Date().getFullYear();
-const art = document.querySelector('.hero-art');
-const model = document.querySelector('.model');
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-let pointerX = 0;
-let pointerY = 0;
-let framePending = false;
-function renderModel() {
-  framePending = false;
-  if (motionPreference.matches) {
-    model.style.removeProperty('--rx');
-    model.style.removeProperty('--ry');
-    return;
-  }
-  model.style.setProperty('--rx', `${-18 + pointerY * 22 + window.scrollY * .035}deg`);
-  model.style.setProperty('--ry', `${25 + pointerX * 32 + window.scrollY * .07}deg`);
-}
-function scheduleModel() {
-  if (!framePending) {
-    framePending = true;
-    requestAnimationFrame(renderModel);
-  }
-}
-art.addEventListener('pointermove', event => {
-  const bounds = art.getBoundingClientRect();
-  pointerX = (event.clientX - bounds.left) / bounds.width - .5;
-  pointerY = (event.clientY - bounds.top) / bounds.height - .5;
-  scheduleModel();
-});
-art.addEventListener('pointerleave', () => {
-  pointerX = pointerY = 0;
-  scheduleModel();
-});
-window.addEventListener('scroll', scheduleModel, { passive: true });
-motionPreference.addEventListener('change', scheduleModel);
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

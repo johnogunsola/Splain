@@ -15,7 +15,10 @@ Splain Studio dis my portfolio that contains my progress as I develop my enginee
 ## Features
 
 - Responsive layouts for desktop and mobile
-- Interactive CSS 3D artwork that responds to pointer movement and scrolling
+- GPU-rendered 3D particle artwork with a green aurora and cursor interaction
+- Click the artwork to morph between Splain, GitHub, and LinkedIn
+- Matching profile links, keyboard controls, and static graphics if WebGL2 is unavailable
+- Animation pauses offscreen; reduced-motion users receive a still particle graphic
 - Scroll reveal animations and a brief studio introduction
 - Mobile navigation with keyboard controls
 - Support for reduced-motion preferences
@@ -26,6 +29,7 @@ Splain Studio dis my portfolio that contains my progress as I develop my enginee
 - **HTML5** — page structure and content
 - **CSS3** — layouts, styling, animations, and 3D transforms
 - **JavaScript** — navigation and interactive effects
+- **WebGL2 / GLSL** — particle morphs, depth shading, and the aurora backdrop
 
 No package installation or build step is required.
 
@@ -48,7 +52,10 @@ The page also loads an external analytics script. Remove that script from `index
 Splain.dev/
 ├── index.html             # Main page
 ├── index.css              # Styles and responsive layouts
-├── index.js               # Navigation and interactive artwork
+├── index.js               # Navigation and scroll reveals
+├── particle-logo.js       # GPU shaders and logo interaction
+├── particle-logo.css      # Particle card and controls
+├── THIRD-PARTY-NOTICES.txt # Bootstrap Icons attribution
 ├── splain-intro.css       # Introduction animation styles
 ├── splain-intro.js        # Introduction animation behaviour
 ├── favicon.svg
@@ -67,3 +74,4 @@ Splain.dev/
 Found a bug or have an idea? Open an issue in this repository.
 
 Built by **John Ogunsola**.
+
