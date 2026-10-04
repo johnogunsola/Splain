@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "splain-dev",
+  "main": "backend/worker.mjs",
+  "compatibility_date": "2026-10-04",
+  "build": { "command": "node scripts/build-assets.mjs" },
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "ai": { "binding": "AI" },
+  "ratelimits": [
+    { "name": "ASK_LIMITER", "namespace_id": "10401", "simple": { "limit": 6, "period": 60 } },
+    { "name": "ASK_TOTAL_LIMITER", "namespace_id": "10402", "simple": { "limit": 30, "period": 60 } }
+  ]
+}

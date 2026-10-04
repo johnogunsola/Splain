@@ -31,7 +31,7 @@ Splain Studio dis my portfolio that contains my progress as I develop my enginee
 - **JavaScript** — navigation and interactive effects
 - **WebGL2 / GLSL** — particle morphs, depth shading, and the aurora backdrop
 
-No package installation or build step is required.
+The portfolio assets can be served directly. Ask Splain requires the Cloudflare Worker and AI bindings; see `ASSISTANT-SETUP.md` for activation, tests and deployment.
 
 ## Running locally
 
