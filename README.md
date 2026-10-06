@@ -38,7 +38,7 @@ The portfolio assets can be served directly. Ask Splain requires the Cloudflare 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/johnogunsola/Splain.dev.git
+   git clone https://github.com/johnogunsola/Splain.git
    ```
 
 2. Open the project folder.
