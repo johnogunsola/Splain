@@ -67,6 +67,7 @@ Splain.dev/
 
 - [Splain Studio](https://splain.dev)
 - [Splain Version 02](https://v2.splain.dev)
+- [Splain Version 03](https://v3.splain.dev/)
 - [My GitHub](https://github.com/johnogunsola)
 
 ## Feedback
