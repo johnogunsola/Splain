@@ -38,6 +38,10 @@ a,
 button {
     -webkit-tap-highlight-color: transparent
 }
+button::selection {
+    background: var(--bg);
+    color: var(--green)
+}
 
 a:focus-visible,
 button:focus-visible {
