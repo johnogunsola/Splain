@@ -46,6 +46,7 @@ button::selection {
 :root {
     scrollbar-color: var(--green) var(--bg); /* <thumb-color> <track-color> */
     scrollbar-width: thin; 
+    --hover-color: #fff
 }
 
 a:focus-visible,
