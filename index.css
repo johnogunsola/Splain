@@ -42,10 +42,12 @@ button::selection {
     background: var(--green);
     color:var(--bg)
 }
+
 :root {
-    scrollbar-color: var(--green); /* <thumb-color> <track-color> */
-  scrollbar-width: thin; 
+    scrollbar-color: var(--green) var(--bg); /* <thumb-color> <track-color> */
+    scrollbar-width: thin; 
 }
+
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--green);
